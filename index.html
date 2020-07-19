@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/hangman.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<title>Hangman Game</title>
+
+	<link rel="icon" href="./imgs/icon.png" type="image/icon type">
+	<style type="text/css">
+		body{
+			background-image: url('imgs/bg.jpg');
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="text-center" id="game title">
+			<img id="hangman title" src="./imgs/title.png" alt="Game Title">
+		</div>
+		<div class="float-right">
+			Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span>
+		</div>
+		<div id="hangmandiv">
+			<img id="hangmanpic" src="./imgs/0.png" alt="Hangman Pic">
+		</div>
+		<div class="text-center">
+			<p id="category"></p>
+			<p id="wordSpotlight"></p>
+			<div id="keyboard">
+			</div>
+			<br>
+			<div class="popup" onclick="getHint()">
+			<button class="btn btn-info m-2">Hint
+			</button>
+			<span class="popuptext" id="myPopup"></span>
+			</div>
+			<button class="btn btn-secondary m-2" onclick="reset()">Reset</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/hangman.js"></script>
+</body>
+</html>
